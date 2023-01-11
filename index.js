@@ -123,6 +123,7 @@ async function run() {
         const filter = { email: user.email };
         const updateDoc = { $set: { role: "admin" } };
         const result = await usersCollection.updateOne(filter, updateDoc);
+        console.log(result);
         res.json(result);
       });
 
